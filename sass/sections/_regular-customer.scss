@@ -1,0 +1,37 @@
+@import "../utils/variables";
+
+.regular-customer {
+  @extend %transition-properties;
+  border: 1px solid $social-grey;
+  border-radius: 4px;
+  color: $social-grey;
+  fill: $social-grey;
+  cursor: pointer;
+  transition-property: fill, border-color;
+  &:hover {
+    border-color: $blue;
+    fill: $blue;
+  }
+  &__header {
+    text-align: center;
+    font-weight: 700;
+    font-size: 36px;
+    letter-spacing: 3%;
+    line-height: 42.19px;
+    margin-bottom: 50px;
+  }
+  &:not(:last-of-type) {
+    margin-right: 30px;
+  }
+  &__list {
+    display: flex;
+    justify-content: center;
+  }
+  &__container {
+    height: 92px;
+    width: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

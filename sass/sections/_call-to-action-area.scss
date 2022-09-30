@@ -1,0 +1,46 @@
+@import "../utils/variables";
+
+.call-to-action-area {
+  position: relative;
+  width: 100%;
+  padding: 200px 0;
+  background-color: var(--dark-blue);
+  text-align: center; /** Centering The Button not sure if correct **/
+  background: url(../images/Img.png) 0 0 no-repeat;
+  overflow: hidden;
+  z-index: 2;
+
+  &__banner {
+    color: $white;
+    font-size: 44px;
+    letter-spacing: 0.06em;
+    font-weight: 900;
+    margin-bottom: 30px;
+  }
+  &__request-service-button {
+    @extend %transition-properties;
+    color: $white;
+    background-color: $blue;
+    border-radius: 4px;
+    border-style: none;
+    padding: 10px 20px;
+    line-height: 30px;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    transition-property: background-color;
+    &:hover,
+    &:focus {
+      background-color: $button-hover-blue;
+    }
+  }
+  &__main-section-overlay {
+    background-color: $dark-blue-40percent;
+    overflow: hidden;
+    height: 100%;
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    top: 0;
+  }
+}

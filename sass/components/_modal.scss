@@ -1,0 +1,225 @@
+@import "../utils/variables";
+
+.modal {
+  @extend %transition-properties;
+  display: block;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: $backdrop-color;
+  transition-property: opacity, visibility;
+  visibility: visible;
+  z-index: 10;
+  opacity: 100%;
+  &__body {
+    @extend %transition-properties;
+    padding: 40px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0px 2px 1px 0px #00000033, 0px 1px 1px 0px #00000024,
+      0px 1px 3px 0px #0000001f;
+    transform: translate(-50%, -50%);
+    z-index: 50;
+  }
+  &__close-btn {
+    @extend %transition-properties;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $backdrop-color;
+    transition-property: fill;
+    &:hover {
+      fill: $blue;
+    }
+  }
+  &--hidden {
+    visibility: hidden;
+    opacity: 0;
+  }
+  &__title {
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $black;
+  }
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  &__label {
+    font-weight: 400;
+    width: 100%;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    color: $grey;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    cursor: pointer;
+    position: relative;
+  }
+  &__label--last {
+    margin-bottom: 20px;
+  }
+  &__label-input {
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding-left: 42px;
+    &:focus,
+    &:hover {
+      border: 1px solid $blue;
+      outline: none;
+      fill: $blue;
+    }
+  }
+  &__input-icon {
+    @extend %transition-properties;
+    fill: currentColor;
+    transition-property: fill;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 15px;
+  }
+
+  &__label-text-wrapper {
+    position: absolute;
+    top: -16px;
+  }
+
+  &__comment {
+    @extend %transition-properties;
+    margin-top: 4px;
+    resize: none;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding: 12px 16px;
+    transition-property: border, outline;
+    position: relative;
+    &:focus,
+    &:hover {
+      border: 1px solid $blue;
+      outline: none;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__checkbox-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: $grey;
+  }
+
+  &__checkbox-label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  &__button-wrapper {
+    display: flex;
+    justify-content: center;
+    &:focus {
+      background-color: $button-hover-blue;
+    }
+  }
+
+  &__checkbox-svg {
+    @extend %transition-properties;
+    transition-property: fill, background-color;
+    border-radius: 2px;
+    fill: currentColor;
+    margin-right: 8px;
+  }
+
+  &__checkbox-input {
+    display: none;
+    &:not(:checked) + svg {
+      border: 2px solid $black;
+      fill: white;
+    }
+    &:checked + svg {
+      fill: white;
+      background-color: $blue;
+    }
+  }
+
+  &__send-button {
+    @extend %transition-properties;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.06em;
+    color: white;
+    transition-property: background-color;
+    padding: 10px 80px;
+    background-color: $blue;
+    border-style: none;
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    &:hover {
+      background-color: $button-hover-blue;
+    }
+  }
+
+  &__input-wrapper {
+    position: relative;
+    color: $black;
+  }
+
+  &__label-input + svg {
+    fill: $black;
+    &:focus + svg,
+    &:hover + svg {
+      fill: $blue;
+    }
+  }
+
+  &__label-input {
+    @extend %transition-properties;
+    transition-property: border, outline;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding-left: 42px;
+    width: 100%;
+    &:focus,
+    &:hover {
+      border: 1px solid $blue;
+      outline: none;
+      fill: $blue;
+    }
+    &:focus + svg,
+    &:hover + svg {
+      fill: $blue;
+    }
+    & + svg {
+      fill: $black;
+    }
+  }
+}

@@ -1,0 +1,69 @@
+@import "../utils/variables";
+
+.projects {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: -30px;
+  margin-left: -30px;
+  &__item {
+    cursor: pointer;
+    position: relative;
+    margin-top: 30px;
+    margin-left: 30px;
+  }
+  &__link {
+    @extend %transition-properties;
+    display: block;
+    transition-property: box-shadow;
+    &:hover,
+    &:focus {
+      box-shadow: 1px 4px 6px 0px #00000029, 0px 4px 4px 0px #0000000f,
+        0px 1px 1px 0px #0000001f;
+    }
+    &:focus &--overlay,
+    &:hover &--overlay {
+      height: 294px;
+    }
+    &--overlay {
+      @extend %transition-properties;
+      position: absolute;
+      overflow: hidden;
+      height: 0px;
+      z-index: 1;
+      bottom: 0;
+      transition-property: height, z-index;
+      bottom: 106px;
+    }
+  }
+  &__info-overlay {
+    width: 100%;
+    height: 294px;
+    padding: 77px 24px;
+    padding-top: 63px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    color: white;
+    background-color: $info-overlay-blue;
+  }
+  &__wrapper {
+    padding: 20px 24px;
+    border: 1px solid $card-border-white;
+    border-top: none;
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 36px;
+    letter-spacing: 0.06em;
+    color: $black;
+  }
+  &__description {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.03em;
+    color: $grey;
+  }
+}

@@ -1,0 +1,53 @@
+@import "../../sass/utils/variables";
+
+%social-media-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition-property: color, background-color;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+}
+
+.social-media {
+  &__icon-svg {
+    fill: currentColor;
+  }
+  &__buttons {
+    margin-top: 16px;
+    display: flex;
+    justify-content: center;
+  }
+  &__links {
+    @extend %transition-properties;
+    @extend %social-media-links;
+    color: $social-grey;
+    &:hover,
+    &:focus {
+      color: white;
+      background-color: $blue;
+    }
+  }
+  &__links--footer {
+    @extend %social-media-links;
+    @extend %transition-properties;
+    color: white;
+    background-color: $white-10percent;
+    &:hover,
+    &:focus {
+      color: white;
+      background-color: $blue;
+    }
+  }
+  &__icon:not(:last-of-type) {
+    margin-right: 10px;
+  }
+  &__container {
+    margin-right: 93px;
+  }
+  &__footer {
+    display: flex;
+  }
+}

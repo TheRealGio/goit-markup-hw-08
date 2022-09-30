@@ -1,0 +1,31 @@
+$blue: #2196f3;
+$black: #212121;
+$grey: #757575;
+$white: #ffffff;
+$dark-blue: #2f303a;
+$off-white: #f5f4fa;
+$card-border-white: #eeeeee;
+$border-bottom-grey: #ececec;
+$white-60percent: rgba(255, 255, 255, 0.6);
+$white-10percent: rgba(255, 255, 255, 0.1);
+$button-hover-blue: #188ce8;
+$social-grey: #afb1bb;
+$dark-blue-80percent: rgba(47, 48, 58, 0.8);
+$dark-blue-40percent: rgba(47, 48, 58, 0.4);
+$info-overlay-blue: rgba(33, 150, 243, 0.9);
+$backdrop-color: rgba(0, 0, 0, 0.2);
+$cubic-beizer-timing-func: cubic-bezier(0.4, 0, 0.2, 1);
+$transition-timing: 250ms;
+$font-family-primary: "Roboto";
+$font-family-secondary: "Raleway";
+
+%transition-properties {
+  transition-timing-function: $cubic-beizer-timing-func;
+  transition-duration: $transition-timing;
+}
+
+%logo {
+  font-family: $font-family-secondary;
+  font-size: 26px;
+  color: $blue;
+}

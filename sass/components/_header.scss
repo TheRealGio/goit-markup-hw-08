@@ -1,0 +1,80 @@
+@import "../utils/variables";
+
+.header {
+  border-bottom: 1px solid $border-bottom-grey;
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__logo {
+    @extend %logo;
+  }
+  &__nav-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 97px;
+  }
+  &__nav-list-items {
+    margin-right: 60px;
+  }
+  &__nav-items {
+    @extend %transition-properties;
+    color: $black;
+    font-size: 14px;
+    font-weight: 500;
+    transition-property: color;
+    display: block;
+    padding: 32px 0 31px 0;
+    &:hover,
+    &:focus {
+      color: $blue;
+    }
+  }
+  &__nav-items--current-link {
+    position: relative;
+    color: $blue;
+    &::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      border-radius: 2px;
+      background: $blue;
+      height: 4px;
+      left: 0px;
+      bottom: -1px;
+    }
+  }
+  &__navbar-contacts {
+    display: flex;
+  }
+  &__navbar-contacts-items {
+    margin-right: 50px;
+  }
+  &__contact-information {
+    @extend %transition-properties;
+    fill: $grey;
+    color: $grey;
+    font-size: 14px;
+    font-weight: 500;
+    transition-property: color;
+    display: flex;
+    align-items: center;
+    padding: 32px 0 31px 0;
+    &:hover,
+    &:focus {
+      color: $blue;
+    }
+  }
+
+  &__svg-nav-styling {
+    fill: currentColor;
+    margin-right: 10px;
+  }
+}

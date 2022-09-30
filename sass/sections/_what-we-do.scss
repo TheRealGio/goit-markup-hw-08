@@ -1,0 +1,38 @@
+@import "../utils/variables";
+
+.what-we-do {
+  display: flex;
+  flex-direction: column;
+  &__title {
+    font-weight: 700;
+    font-size: 36px;
+    text-align: center;
+    color: $black;
+    margin-bottom: 50px;
+  }
+  &__images-list {
+    display: flex;
+    align-items: center;
+  }
+  &__images-list-item {
+    position: relative;
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+  &__overlay-text {
+    position: absolute;
+    height: 70px;
+    width: 100%;
+    bottom: 0;
+    background-color: $dark-blue-80percent;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
