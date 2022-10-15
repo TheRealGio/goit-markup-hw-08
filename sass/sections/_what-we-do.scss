@@ -1,8 +1,11 @@
 @import "../utils/variables";
 
 .what-we-do {
-  display: flex;
-  flex-direction: column;
+  display: none;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-direction: column;
+  }
   &__title {
     font-weight: 700;
     font-size: 36px;

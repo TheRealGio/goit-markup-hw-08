@@ -1,0 +1,98 @@
+@import "../utils/variables";
+
+.mobile-menu {
+  @extend %transition-properties;
+  background-color: white;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 2000;
+  padding: 48px 40px 48px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition-property: opacity, visibility;
+  &--hidden {
+    visibility: hidden;
+    opacity: 0;
+  }
+  &__list {
+    z-index: 4000;
+  }
+  &__closeBtn {
+    position: absolute;
+    top: 21px;
+    right: 26px;
+    @extend %transition-properties;
+    transition-property: fill;
+    cursor: pointer;
+    &:hover,
+    &:focus {
+      fill: $blue;
+    }
+  }
+  &__nav-item {
+    font-size: 40px;
+    line-height: 47px;
+    letter-spacing: 0.02em;
+    @extend %transition-properties;
+    transition-property: color;
+    cursor: pointer;
+    &:hover,
+    &:focus {
+      color: $blue;
+    }
+    &:not(:last-child) {
+      margin-bottom: 35px;
+    }
+  }
+  &__contact-information {
+    &:not(:last-child) {
+      margin-bottom: 32px;
+    }
+    &:last-child {
+      margin-bottom: 64px;
+    }
+  }
+  &__phone-number {
+    font-size: 34px;
+    line-height: 40px;
+    letter-spacing: 0.02em;
+    @extend %transition-properties;
+    color: $grey;
+    transition-property: color;
+
+    &:hover,
+    &:focus {
+      color: $blue;
+    }
+  }
+  &__email {
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.02em;
+    @extend %transition-properties;
+    color: $grey;
+    transition-property: color;
+    &:hover,
+    &:focus {
+      color: $blue;
+    }
+  }
+  &__seperator {
+    border-left: 1px solid #21212133;
+    height: 22px;
+  }
+  &__social-mobile-item {
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.02em;
+    color: $blue;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  &__social-mobile-menu {
+    display: flex;
+    gap: 10px;
+  }
+}

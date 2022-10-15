@@ -3,19 +3,26 @@
 .call-to-action-area {
   position: relative;
   width: 100%;
-  padding: 200px 0;
+  padding: 118px 0;
   background-color: var(--dark-blue);
   text-align: center; /** Centering The Button not sure if correct **/
   background: url(../images/Img.png) 0 0 no-repeat;
+  background-size: cover;
   overflow: hidden;
   z-index: 2;
+  @media screen and (min-width: 1200px) {
+    padding: 200px 0;
+  }
 
   &__banner {
     color: $white;
-    font-size: 44px;
+    font-size: 26px;
     letter-spacing: 0.06em;
     font-weight: 900;
     margin-bottom: 30px;
+    @media screen and (min-width: 1200px) {
+      font-size: 44px;
+    }
   }
   &__request-service-button {
     @extend %transition-properties;

@@ -2,6 +2,9 @@
 
 .header {
   border-bottom: 1px solid $border-bottom-grey;
+  &--hidden {
+    display: none;
+  }
   &__wrapper {
     display: flex;
     justify-content: space-between;
@@ -16,10 +19,14 @@
     @extend %logo;
   }
   &__nav-list {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-left: 97px;
+    display: none;
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-left: 97px;
+    }
   }
   &__nav-list-items {
     margin-right: 60px;
@@ -53,9 +60,33 @@
   }
   &__navbar-contacts {
     display: flex;
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-direction: column;
+    }
+    @media screen and (min-width: 1200px) {
+      flex-direction: row;
+    }
   }
   &__navbar-contacts-items {
-    margin-right: 50px;
+    display: none;
+    @media screen and (min-width: 1200px) {
+      display: block;
+      margin-right: 50px;
+    }
+    @media screen and (min-width: 768px) {
+      display: block;
+    }
+    &--burger-menu {
+      display: block;
+      fill: $grey;
+      @media screen and (min-width: 1200px) {
+        display: none;
+      }
+      @media screen and (min-width: 768px) {
+        display: none;
+      }
+    }
   }
   &__contact-information {
     @extend %transition-properties;
@@ -70,6 +101,12 @@
     &:hover,
     &:focus {
       color: $blue;
+    }
+    @media screen and (min-width: 768px) {
+      padding: 10px;
+    }
+    @media screen and (min-width: 1200px) {
+      padding: 32px 0 31px 0;
     }
   }
 

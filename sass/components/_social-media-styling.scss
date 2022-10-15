@@ -45,9 +45,17 @@
     margin-right: 10px;
   }
   &__container {
-    margin-right: 93px;
+    @media screen and (min-width: 1200px) {
+      margin-right: 93px;
+    }
   }
   &__footer {
     display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+    @media screen and (min-width: 1200px) {
+      justify-content: unset;
+      margin-bottom: 0px;
+    }
   }
 }

@@ -99,6 +99,14 @@
         </ul>
       </nav>
       <ul class="header__navbar-contacts list">
+        <li class="header__navbar-contacts-items--burger-menu">
+          <a href="#" class="header__contact-information link">
+            <svg class="header__svg-nav-styling menu-toggle js-open-menu" aria-expanded="false"
+            aria-controls="mobile-menu" width="24" height="16">
+              <use href="./images/icons.svg#icon-burger_menu"></use>
+            </svg>
+          </a>
+        </li>
         <li class="header__navbar-contacts-items">
           <a href="mailto:info@devstudio.com" class="header__contact-information link">
             <svg class="header__svg-nav-styling" width="16" height="16">
@@ -119,6 +127,34 @@
     </div>
   </header>
   <main>
+     <div class="mobile-menu mobile-menu--hidden " id="mobile-menu" >
+      <div class="menu-toggle mobile-menu__closeBtn close-menu">
+          <svg width="19" height="19">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </div>
+
+      <ul class="mobile-menu__list list">
+        <li class="mobile-menu__nav-item"><a href="index.html" class="link">Studio</a></li>
+        <li class="mobile-menu__nav-item"><a href="portfolio.html" class="mobile-menu__nav-item link">Portfolio</a></li>
+        <li class="mobile-menu__nav-item"><a href="" class="mobile-menu__nav-item link">Contacts</a></li>
+      </ul>
+      <div class="mobile-menu__group">
+      <ul class="mobile-menu__list list">
+        <li class="mobile-menu__contact-information"><a href="" class="link mobile-menu__phone-number">+38 096 111 11 11</a></li>
+        <li class="mobile-menu__contact-information"><a href="" class="link mobile-menu__email">info@devstudio.com</a></li>
+      </ul>
+      <ul class="mobile-menu__list mobile-menu__social-mobile-menu list">
+        <li><a class="mobile-menu__social-mobile-item link">Instagram</a></li>
+        <li><div class="mobile-menu__seperator"></div></li>
+        <li><a class="link mobile-menu__social-mobile-item">Twitter</a></li>
+        <li><div class="mobile-menu__seperator"></div></li>
+        <li><a class="link mobile-menu__social-mobile-item">Facebook</a></li>
+        <li><div class="mobile-menu__seperator"></div></li>
+        <li><a class="link mobile-menu__social-mobile-item">LinkedIn</a></li>
+      </ul>
+      </div>
+    </div>
     <section class="call-to-action-area">
       <div class="container">
         <h1 class="call-to-action-area__banner">
@@ -225,10 +261,8 @@
         <ul class="team list">
           <li class="team__item">
             <img
-              src="./images/imgguy-with-rdj-glasses.jpg"
+              srcset="./images/imgguy-with-rdj-glasses.jpg 768w, ./images/imgguy-with-rdj-glasses-mobile.jpg 480w"
               alt="Igor Demyanenko's personal picture who is the product desinger"
-              width="270"
-              height="260"
               class="team__image"
             />
             <h3 class="team__name" lang="ru">Игорь Демьяненко</h3>
@@ -266,10 +300,8 @@
           </li>
           <li class="team__item">
             <img
-              src="./images/imgbusiness-woman.jpg"
+              srcset="./images/imgbusiness-woman.jpg 768w, ./images/imgbusiness-woman-mobile.jpg 480w"              
               alt="Olga Repina's picture who is the frontend developer"
-              width="270"
-              height="260"
               class="team__image"
             />
             <h3 class="team__name" lang="ru">Ольга Репина</h3>
@@ -307,10 +339,8 @@
           </li>
           <li class="team__item">
             <img
-              src="./images/imgguy-without-glasses.jpg"
+              srcset="./images/imgguy-without-glasses.jpg 768w, ./images/imgguy-without-glasses-mobile.jpg 480w"
               alt="Nikolay Tarasov's picture who works in marketing"
-              width="270"
-              height="260"
               class="team__image"
             />
             <h3 class="team__name" lang="ru">Николай Тарасов</h3>
@@ -348,10 +378,8 @@
           </li>
           <li class="team__item">
             <img
-              src="./images/imgguy-with-smirk.jpg"
+              srcset="./images/imgguy-with-smirk.jpg 768w, ./images/imgguy-with-smirk-mobile 480w"
               alt="Михаил Ермаков's picture who is the UI Designer"
-              width="270"
-              height="260"
               class="team__image"
             />
             <h3 class="team__name" lang="ru">Михаил Ермаков</h3>
@@ -513,6 +541,13 @@
     </div>
   </footer>
     <script src="./js/modal.js"></script>
+        <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/mobile-menu.js"></script>
   </body>
 </html>
 

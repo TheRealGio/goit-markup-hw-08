@@ -43,6 +43,14 @@
         </ul>
       </nav>
       <ul class="header__navbar-contacts list">
+        <li class="header__navbar-contacts-items--burger-menu">
+          <a href="#" class="header__contact-information link">
+            <svg class="header__svg-nav-styling menu-toggle js-open-menu" aria-expanded="false"
+            aria-controls="mobile-menu" width="24" height="16">
+              <use href="./images/icons.svg#icon-burger_menu"></use>
+            </svg>
+          </a>
+        </li>
         <li class="header__navbar-contacts-items">
           <a href="mailto:info@devstudio.com" class="header__contact-information link">
             <svg class="header__svg-nav-styling" width="16" height="16">
@@ -62,7 +70,34 @@
       </ul>
     </div>
   </header>
-    <main>
+    <main>     
+      <div class="mobile-menu mobile-menu--hidden " id="mobile-menu" >
+      <div class="menu-toggle mobile-menu__closeBtn close-menu">
+          <svg width="19" height="19">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </div>
+      <ul class="mobile-menu__list list">
+        <li class="mobile-menu__nav-item"><a href="index.html" class="link">Studio</a></li>
+        <li class="mobile-menu__nav-item"><a href="portfolio.html" class="mobile-menu__nav-item link">Portfolio</a></li>
+        <li class="mobile-menu__nav-item"><a href="" class="mobile-menu__nav-item link">Contacts</a></li>
+      </ul>
+      <div class="mobile-menu__group">
+      <ul class="mobile-menu__list list">
+        <li class="mobile-menu__contact-information"><a href="" class="link mobile-menu__phone-number">+38 096 111 11 11</a></li>
+        <li class="mobile-menu__contact-information"><a href="" class="link mobile-menu__email">info@devstudio.com</a></li>
+      </ul>
+      <ul class="mobile-menu__list mobile-menu__social-mobile-menu list">
+        <li><a class="mobile-menu__social-mobile-item link">Instagram</a></li>
+        <li><div class="mobile-menu__seperator"></div></li>
+        <li><a class="link mobile-menu__social-mobile-item">Twitter</a></li>
+        <li><div class="mobile-menu__seperator"></div></li>
+        <li><a class="link mobile-menu__social-mobile-item">Facebook</a></li>
+        <li><div class="mobile-menu__seperator"></div></li>
+        <li><a class="link mobile-menu__social-mobile-item">LinkedIn</a></li>
+      </ul>
+      </div>
+    </div>
       <section class="section">
         <div class="container">
           <ul class="filters list">
@@ -81,10 +116,12 @@
             </li>
             <li class="filters__items">
               <button type="button" class="filters__button">Design</button>
-              </li class="filters__items">
+              </li>
+              <li class="filters__items">
                 <button type="button" class="filters__button">
                   Marketing
                 </button>
+                </li>
             </li>
           </ul>
 
@@ -340,5 +377,6 @@
         </form>
     </div>
   </footer>
+      <script defer src="js/mobile-menu.js"></script>
   </body>
 </html>

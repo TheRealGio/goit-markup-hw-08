@@ -8,6 +8,20 @@
   fill: $social-grey;
   cursor: pointer;
   transition-property: fill, border-color;
+  &:last-of-type {
+    margin-right: 30px;
+  }
+  & {
+    margin-bottom: 30px;
+  }
+  @media screen and (min-width: 1200px) {
+    &:last-of-type {
+      margin-right: 0px;
+    }
+    & {
+      margin-bottom: 0px;
+    }
+  }
   &:hover {
     border-color: $blue;
     fill: $blue;
@@ -26,12 +40,20 @@
   &__list {
     display: flex;
     justify-content: center;
+    flex-flow: wrap;
+
+    @media screen and (min-width: 1200px) {
+      flex-flow: nowrap;
+    }
   }
   &__container {
     height: 92px;
-    width: 170px;
+    width: 210px;
     display: flex;
     align-items: center;
     justify-content: center;
+    @media screen and (min-width: 1200px) {
+      width: 170px;
+    }
   }
 }
