@@ -23,6 +23,10 @@
       0px 1px 3px 0px #0000001f;
     transform: translate(-50%, -50%);
     z-index: 50;
+    @media screen and (max-height: 400px) {
+      top: 0;
+      transform: translate(-50%);
+    }
   }
   &__close-btn {
     @extend %transition-properties;

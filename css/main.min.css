@@ -73,10 +73,20 @@ address {
 }
 
 .section {
-  padding: 94px 0;
+  padding: 60px 0;
+}
+@media screen and (min-width: 1200px) {
+  .section {
+    padding: 94px 0;
+  }
 }
 .section--no-top-padding {
   padding-top: 0px;
+}
+@media screen and (min-width: 768px) {
+  .section--no-top-padding {
+    display: none;
+  }
 }
 .section--team {
   background-color: #f5f4fa;
@@ -102,6 +112,12 @@ address {
     flex-direction: row;
     flex-flow: wrap;
     justify-content: center;
+    margin-right: -30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .benefits {
+    flex-flow: unset;
   }
 }
 .benefits__icon {
@@ -125,9 +141,6 @@ address {
   .benefits__item {
     margin-right: 30px;
     flex-basis: calc((100% - 120px) / 2);
-  }
-  .benefits__item:not(:last-child) {
-    margin-right: 30px;
   }
 }
 .benefits__title {
@@ -301,6 +314,7 @@ address {
 @media screen and (min-width: 1200px) {
   .footer__content-dividing {
     display: flex;
+    text-align: start;
   }
 }
 @media screen and (min-width: 768px) {
@@ -317,6 +331,7 @@ address {
 @media screen and (min-width: 1200px) {
   .footer__contact-info {
     margin-right: 70px;
+    margin-bottom: 0px;
   }
 }
 .footer__logo {
@@ -346,6 +361,11 @@ address {
     text-align: center;
   }
 }
+@media screen and (min-width: 1200px) {
+  .footer__title {
+    text-align: start;
+  }
+}
 .footer__newsletter-input-styling {
   padding: 15px 16px;
   width: 358px;
@@ -357,13 +377,19 @@ address {
   transition-property: border;
   outline: none;
   margin-right: 7px;
+  margin-bottom: 20px;
 }
 .footer__newsletter-input-styling:focus, .footer__newsletter-input-styling:hover {
   border: 1px solid white;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .footer__newsletter-input-styling {
     margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer__newsletter-input-styling {
+    width: 450px;
   }
 }
 .footer__newsletter-button {
@@ -386,6 +412,18 @@ address {
 }
 .footer__newsletter-button:hover, .footer__newsletter-button:focus {
   background-color: #188ce8;
+}
+@media screen and (min-width: 768px) {
+  .footer__newsletter-button {
+    display: block;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer__newsletter {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .mobile-menu__email, .mobile-menu__phone-number, .mobile-menu__nav-item, .mobile-menu__closeBtn, .mobile-menu, .projects__link--overlay, .projects__link, .social-media__links--footer, .social-media__links, .regular-customer, .team__social-media-links, .modal__label-input, .modal__send-button, .modal__checkbox-svg, .modal__comment, .modal__input-icon, .modal__close-btn, .modal__body, .modal, .header__contact-information, .header__nav-items, .call-to-action-area__request-service-button, .filters__button, .footer__address-bar-links, .footer__newsletter-input-styling, .footer__newsletter-button {
@@ -556,6 +594,12 @@ address {
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.1411764706), 0px 1px 3px 0px rgba(0, 0, 0, 0.1215686275);
   transform: translate(-50%, -50%);
   z-index: 50;
+}
+@media screen and (max-height: 400px) {
+  .modal__body {
+    top: 0;
+    transform: translate(-50%);
+  }
 }
 .modal__close-btn {
   border-radius: 50%;
@@ -748,18 +792,20 @@ address {
   flex-direction: column;
   align-items: center;
 }
-@media screen and (min-width: 1200px) {
-  .team {
-    display: flex;
-    justify-content: center;
-  }
-}
 @media screen and (min-width: 768px) {
   .team {
     flex-direction: row;
     flex-flow: wrap;
     justify-content: center;
     display: flex;
+    margin-right: -30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team {
+    display: flex;
+    justify-content: center;
+    flex-flow: unset;
   }
 }
 .team__header {
@@ -775,12 +821,11 @@ address {
   border-radius: 0px 0px 4px 4px;
   text-align: center;
   padding-bottom: 30px;
-  max-width: 460px;
   align-items: center;
   margin-bottom: 30px;
 }
 @media screen and (min-width: 1200px) {
-  .team__item:not(:last-child) {
+  .team__item {
     margin-right: 30px;
   }
 }
@@ -886,6 +931,12 @@ address {
 @media screen and (min-width: 1200px) {
   .regular-customer__list {
     flex-flow: nowrap;
+    margin-right: -30px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .regular-customer__list {
+    margin-right: -30px;
   }
 }
 .regular-customer__container {
@@ -1045,7 +1096,6 @@ address {
 }
 @media screen and (min-width: 768px) {
   .projects {
-    margin: 0 auto;
     justify-content: unset;
   }
 }
@@ -1163,17 +1213,35 @@ address {
   transition-property: color;
   cursor: pointer;
 }
+@media screen and (max-height: 400px) {
+  .mobile-menu__nav-item {
+    font-size: 20px;
+  }
+}
 .mobile-menu__nav-item:hover, .mobile-menu__nav-item:focus {
   color: #2196f3;
 }
 .mobile-menu__nav-item:not(:last-child) {
   margin-bottom: 35px;
 }
+.mobile-menu__nav-item__nav-item--current-item {
+  color: #2196f3;
+}
 .mobile-menu__contact-information:not(:last-child) {
   margin-bottom: 32px;
 }
+@media screen and (max-height: 400px) {
+  .mobile-menu__contact-information:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
 .mobile-menu__contact-information:last-child {
   margin-bottom: 64px;
+}
+@media screen and (max-height: 400px) {
+  .mobile-menu__contact-information:last-child {
+    margin-bottom: 10px;
+  }
 }
 .mobile-menu__phone-number {
   font-size: 34px;
@@ -1181,6 +1249,11 @@ address {
   letter-spacing: 0.02em;
   color: #757575;
   transition-property: color;
+}
+@media screen and (max-height: 400px) {
+  .mobile-menu__phone-number {
+    font-size: 20px;
+  }
 }
 .mobile-menu__phone-number:hover, .mobile-menu__phone-number:focus {
   color: #2196f3;
@@ -1191,6 +1264,11 @@ address {
   letter-spacing: 0.02em;
   color: #757575;
   transition-property: color;
+}
+@media screen and (max-height: 400px) {
+  .mobile-menu__email {
+    font-size: 20px;
+  }
 }
 .mobile-menu__email:hover, .mobile-menu__email:focus {
   color: #2196f3;
@@ -1206,6 +1284,11 @@ address {
   color: #2196f3;
   font-weight: 500;
   cursor: pointer;
+}
+@media screen and (max-height: 400px) {
+  .mobile-menu__social-mobile-item {
+    font-size: 14px;
+  }
 }
 .mobile-menu__social-mobile-menu {
   display: flex;

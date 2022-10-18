@@ -38,6 +38,9 @@
     @extend %transition-properties;
     transition-property: color;
     cursor: pointer;
+    @media screen and (max-height: 400px) {
+      font-size: 20px;
+    }
     &:hover,
     &:focus {
       color: $blue;
@@ -45,13 +48,22 @@
     &:not(:last-child) {
       margin-bottom: 35px;
     }
+    &__nav-item--current-item {
+      color: $blue;
+    }
   }
   &__contact-information {
     &:not(:last-child) {
       margin-bottom: 32px;
+      @media screen and (max-height: 400px) {
+        margin-bottom: 10px;
+      }
     }
     &:last-child {
       margin-bottom: 64px;
+      @media screen and (max-height: 400px) {
+        margin-bottom: 10px;
+      }
     }
   }
   &__phone-number {
@@ -61,7 +73,9 @@
     @extend %transition-properties;
     color: $grey;
     transition-property: color;
-
+    @media screen and (max-height: 400px) {
+      font-size: 20px;
+    }
     &:hover,
     &:focus {
       color: $blue;
@@ -74,6 +88,9 @@
     @extend %transition-properties;
     color: $grey;
     transition-property: color;
+    @media screen and (max-height: 400px) {
+      font-size: 20px;
+    }
     &:hover,
     &:focus {
       color: $blue;
@@ -90,6 +107,9 @@
     color: $blue;
     font-weight: 500;
     cursor: pointer;
+    @media screen and (max-height: 400px) {
+      font-size: 14px;
+    }
   }
   &__social-mobile-menu {
     display: flex;

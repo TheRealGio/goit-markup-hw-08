@@ -1,9 +1,15 @@
 @import "../utils/variables";
 
 .section {
-  padding: 94px 0;
+  padding: 60px 0;
+  @media screen and (min-width: 1200px) {
+    padding: 94px 0;
+  }
   &--no-top-padding {
     padding-top: 0px;
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
   }
   &--team {
     background-color: $off-white;
