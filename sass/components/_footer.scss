@@ -3,6 +3,12 @@
 .footer {
   background-color: $dark-blue;
   padding: 60px 0;
+  &__address-spacing {
+    margin-bottom: 60px;
+    @media screen and (min-width: 480px) {
+      margin-bottom: 0px;
+    }
+  }
   &__content-dividing {
     display: block;
     text-align: center;
@@ -75,8 +81,9 @@
     }
     @media screen and (min-width: 1200px) {
       margin-bottom: 20px;
+      width: 358px;
     }
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 480px) and (max-width: 768px) {
       width: 450px;
     }
   }
@@ -102,9 +109,12 @@
     &:focus {
       background-color: $button-hover-blue;
     }
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 480px) and (max-width: 768px) {
       display: block;
       margin: 0 auto;
+    }
+    @media screen and (min-width: 1200px) {
+      display: inline-flex;
     }
   }
   &__newsletter {

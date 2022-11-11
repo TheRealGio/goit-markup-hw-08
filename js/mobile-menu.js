@@ -4,7 +4,7 @@
     ".header__navbar-contacts-items--burger-menu"
   );
   const closeMenuBtn = document.querySelector(".close-menu");
-  const header = document.querySelector(".header");
+  const header = document.querySelector(".header__wrapper");
 
   const toggleMenu = () => {
     const isMenuOpen =
@@ -12,6 +12,7 @@
     openMenuBtn.setAttribute("aria-expanded", !isMenuOpen);
     mobileMenu.classList.toggle("mobile-menu--hidden");
     header.classList.toggle("header--hidden");
+    header.classList.toggle("header__wrapper");
 
     const scrollLockMethod = !isMenuOpen
       ? "disableBodyScroll"
