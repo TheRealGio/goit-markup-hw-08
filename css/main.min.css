@@ -145,7 +145,7 @@ address {
     flex-direction: row;
     flex-flow: wrap;
     justify-content: center;
-    margin-right: -30px;
+    margin-left: -30px;
     margin-top: -30px;
   }
 }
@@ -168,10 +168,16 @@ address {
 .benefits__item {
   flex-basis: calc((100% - 120px) / 3);
 }
+@media screen and (max-width: 768px) {
+  .benefits__item {
+    margin-bottom: 30px;
+  }
+}
 @media screen and (min-width: 768px) {
   .benefits__item {
-    margin-right: 30px;
+    margin-left: 30px;
     margin-top: 30px;
+    margin-bottom: 0px;
     flex-basis: calc((100% - 120px) / 2);
   }
 }
@@ -606,6 +612,7 @@ address {
   display: block;
   position: fixed;
   width: 100vw;
+  top: 0;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.2);
   transition-property: opacity, visibility;
@@ -830,7 +837,7 @@ address {
     flex-flow: wrap;
     justify-content: center;
     display: flex;
-    margin-right: -30px;
+    margin-left: -30px;
     margin-top: -30px;
   }
 }
@@ -861,6 +868,7 @@ address {
 @media screen and (min-width: 1200px) {
   .team__item {
     margin-right: 30px;
+    margin-bottom: 0px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -874,8 +882,9 @@ address {
 @media screen and (min-width: 768px) {
   .team__item {
     flex-basis: calc((100% - 60px) / 2);
-    margin-right: 30px;
+    margin-left: 30px;
     margin-top: 30px;
+    margin-bottom: 0px;
   }
 }
 .team__image {
@@ -929,15 +938,15 @@ address {
 @media screen and (min-width: 480px) and (max-width: 1199px) {
   .regular-customer {
     margin-top: 30px;
-    margin-right: 30px;
+    margin-left: 30px;
   }
 }
 @media screen and (min-width: 1200px) {
-  .regular-customer:last-of-type {
-    margin-right: 0px;
-  }
   .regular-customer {
     margin-bottom: 0px;
+  }
+  .regular-customer:not(:last-of-type) {
+    margin-right: 30px;
   }
 }
 .regular-customer:hover {
@@ -952,25 +961,22 @@ address {
   line-height: 42.19px;
   margin-bottom: 50px;
 }
-.regular-customer:not(:last-of-type) {
-  margin-right: 30px;
-}
 .regular-customer__list {
   display: flex;
   justify-content: center;
   flex-flow: wrap;
-  margin-right: -30px;
-  margin-bottom: -30px;
+  margin-left: -30px;
+  margin-top: -30px;
 }
 @media screen and (min-width: 1200px) {
   .regular-customer__list {
     flex-wrap: nowrap;
-    margin-right: -30px;
+    margin-left: -30px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1200px) {
   .regular-customer__list {
-    margin-right: -30px;
+    margin-left: -30px;
     margin-top: -30px;
   }
 }

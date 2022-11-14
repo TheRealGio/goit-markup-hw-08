@@ -5,6 +5,7 @@
   display: block;
   position: fixed;
   width: 100vw;
+  top: 0;
   height: 100vh;
   background-color: $backdrop-color;
   transition-property: opacity, visibility;
